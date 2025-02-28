@@ -50,7 +50,7 @@ class MessageBubble extends StatelessWidget {
                 crossAxisAlignment:
                     isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 18),
+                  if (username != null) const SizedBox(height: 10),
                   if (username != null)
                     Padding(
                       padding: const EdgeInsets.only(
@@ -82,7 +82,7 @@ class MessageBubble extends StatelessWidget {
                       ),
                     ),
                     constraints: const BoxConstraints(maxWidth: 200),
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 15),
                     margin: EdgeInsets.symmetric(vertical: 4, horizontal: 12),
                     child: Text(
                       message,
